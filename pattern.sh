@@ -1,4 +1,11 @@
-#!/bin/bash
+read -p "Enter your email:(ex:91 0000000000) " userMobileNumber
+mobilePattern="(^[0-9]{2}[ ])*[0-9]{10}"
+if [[ $userMobileNumber =~ mobilePattern ]]
+then
+        echo "Yes pattern matched"
+else
+        echo "Pattern not matched"
+fi#!/bin/bash
 
 read -p "Enter your name:" userFName
 pattern="(^[A-Z]{1})[a-z]{2,}$"
