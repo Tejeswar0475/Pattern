@@ -27,9 +27,18 @@ fi
 
 read -p "Enter your email:(ex:abc.xyz@bl.co.in) " userEmail
 emailPattern="(^[a-z]{3}.)|(^[a-z]{3})|@([a-z]{2}.[a-z]{2}.)"
-if [[ $userEmail =~ emailPattern ]]
+if [[ $userEmail =~ $emailPattern ]]
 then
         echo "Yes pattern matched"
 else
         echo "Pattern not matched"
+fi
+
+read -p "Entere Password" userPassword
+passwordPattern="^(?=.{8,}$)(?=.*\d)(?=.*[A-Z])[a-zA-Z0-9]*[\@\#\^][a-zA-Z0-9]*$"
+if [[ $userPassword =~ $passwordPattern ]]
+then
+	echo "Yes pattern matched"
+else
+	echo "No pattern matched"
 fi
