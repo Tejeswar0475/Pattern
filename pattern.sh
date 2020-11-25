@@ -8,3 +8,12 @@ then
 else
         echo "No pattern matched";
 fi
+
+read -p "Enter First name and last Name:" userFLName
+pattern2="(^[A-Z]{1}[a-z]{2,}\s[A-Z]{1}[a-z]{2,}$)"
+if [[ $userFLName =~ $pattern2 ]]
+then
+        echo "Pattern matched"
+else
+        echo "Pattern not matched"
+fi
